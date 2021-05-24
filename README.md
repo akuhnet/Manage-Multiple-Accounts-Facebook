@@ -4,7 +4,7 @@ How To Manage Multiple Accounts Facebook At One Click Part I
 Just Paste User agent android to bookmark bar
 <br>
 <br>
-Creat / Paste facebook.csv and Status.csv to
+Creat or Paste facebook.csv and status.csv
 <br>
 C:\Users\Administrator\Documents\iMacros\Datasources
 <br>
@@ -12,7 +12,7 @@ C:\Users\Administrator\Documents\iMacros\Datasources
 My website: https://akuh.net
 <br>
 <br>
-Article:
+Article: https://www.akuh.net/2021/05/how-to-manage-multiple-accounts-facebook-part-i.html
 <br>
 <br>
-Video Tutorial:
+Video Tutorial: https://youtu.be/rF0xqusQV8Y
