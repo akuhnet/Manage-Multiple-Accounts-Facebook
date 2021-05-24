@@ -19,8 +19,9 @@ TAG POS=1 TYPE=INPUT:PASSWORD FORM=ID:login_form ATTR=ID:m_login_password CONTEN
 WAIT SECONDS={{!var1}}
 TAG POS=1 TYPE=BUTTON FORM=ID:login_form ATTR=NAME:login
 WAIT SECONDS={{!var1}}
-SET !DATASOURCE Status.csv
-SET !VAR2 EVAL("var randomNumber=Math.floor(Math.random()*21492 + 1); randomNumber;")
+SET !DATASOURCE status.csv
+'Change *100 with you number status in csv'
+SET !VAR2 EVAL("var randomNumber=Math.floor(Math.random()*100 + 1); randomNumber;")
 WAIT SECONDS={{!var1}}
 TAG POS=1 TYPE=BUTTON FORM=ACTION:/login/device-based/update-nonce/ ATTR=TXT:OK
 WAIT SECONDS={{!var1}}
