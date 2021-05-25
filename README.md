@@ -12,7 +12,8 @@ C:\Users\Administrator\Documents\iMacros\Datasources
 My website: https://akuh.net
 <br>
 <br>
-Article: https://www.akuh.net/2021/05/how-to-manage-multiple-accounts-facebook-part-i.html
+Article Part I: https://www.akuh.net/2021/05/how-to-manage-multiple-accounts-facebook-part-i.html
 <br>
+Article Part I: https://www.akuh.net/2021/05/2021/05/how-to-manage-multiple-accounts-facebook-part-ii.html
 <br>
 Video Tutorial: https://youtu.be/rF0xqusQV8Y
