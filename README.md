@@ -8,6 +8,8 @@ Creat or Paste facebook.csv and status.csv
 <br>
 C:\Users\Administrator\Documents\iMacros\Datasources
 <br>
+Part II add Auto Like
+<br>
 <br>
 My website: https://akuh.net
 <br>
