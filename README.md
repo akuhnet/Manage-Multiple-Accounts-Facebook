@@ -1,5 +1,5 @@
 # FB
-How To Manage Multiple Accounts Facebook At One Click Part I
+How To Manage Multiple Accounts Facebook At One Click
 <br>
 Just Paste User agent android to bookmark bar
 <br>
