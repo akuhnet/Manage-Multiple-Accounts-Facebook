@@ -1,0 +1,109 @@
+SET !TIMEOUT_PAGE 10
+SET !REPLAYSPEED FAST
+SET !ERRORIGNORE YES
+SET !EXTRACT_TEST_POPUP NO
+PROMPT "Visit akuh.net 😊"
+SET !USERAGENT "Mozilla/5.0 (Android 10; Mobile; rv:84.0) Gecko/84.0 Firefox/84.0"
+SET !VAR1 EVAL("var randomNumber=Math.floor(Math.random()*3 + 2); randomNumber;")
+TAB CLOSEALLOTHERS
+'///////////////////facebook status///////////////////'
+SET !DATASOURCE facebook.csv
+TAB T=1
+URL GOTO=https://m.facebook.com
+WAIT SECONDS={{!var1}}
+TAG POS=1 TYPE=A ATTR=TXT:English<SP>(UK)
+WAIT SECONDS={{!var1}}
+TAG POS=1 TYPE=INPUT:EMAIL FORM=ID:login_form ATTR=ID:m_login_email CONTENT={{!COL1}}
+WAIT SECONDS={{!var1}}
+SET !ENCRYPTION NO
+TAG POS=1 TYPE=INPUT:PASSWORD FORM=ID:login_form ATTR=ID:m_login_password CONTENT={{!COL2}}
+WAIT SECONDS={{!var1}}
+TAG POS=1 TYPE=BUTTON FORM=ID:login_form ATTR=NAME:login
+WAIT SECONDS={{!var1}}
+'change 21492 with the number of your status'
+SET !DATASOURCE status.csv
+SET !VAR2 EVAL("var randomNumber=Math.floor(Math.random()*21492 + 1); randomNumber;")
+WAIT SECONDS={{!var1}}
+TAG POS=1 TYPE=BUTTON FORM=ACTION:/login/device-based/update-nonce/ ATTR=TXT:OK
+WAIT SECONDS={{!var1}}
+TAG POS=2 TYPE=DIV ATTR=TXT:What's<SP>on<SP>your<SP>mind?
+WAIT SECONDS={{!var1}}
+TAG POS=1 TYPE=TEXTAREA FORM=ID:structured_composer_form ATTR=ID:uniqid_1 CONTENT={{!COL1}}
+WAIT SECONDS={{!var1}}
+TAG POS=4 TYPE=BUTTON ATTR=TXT:Post
+WAIT SECONDS=10
+'///////////////////febook like///////////////////'
+TAG POS=2 TYPE=A ATTR=TXT:Like
+WAIT SECONDS={{!var1}}
+TAG POS=3 TYPE=A ATTR=TXT:Like
+WAIT SECONDS={{!var1}}
+TAG POS=4 TYPE=A ATTR=TXT:Like
+WAIT SECONDS={{!var1}}
+TAG POS=5 TYPE=A ATTR=TXT:Like
+WAIT SECONDS={{!var1}}
+URL GOTO=javascript:window.scrollBy(1,5000)
+TAG POS=6 TYPE=A ATTR=TXT:Like
+WAIT SECONDS={{!var1}}
+TAG POS=7 TYPE=A ATTR=TXT:Like
+WAIT SECONDS={{!var1}}
+TAG POS=8 TYPE=A ATTR=TXT:Like
+WAIT SECONDS={{!var1}}
+TAG POS=9 TYPE=A ATTR=TXT:Like
+WAIT SECONDS={{!var1}}
+TAG POS=10 TYPE=A ATTR=TXT:Like
+WAIT SECONDS={{!var1}}
+TAG POS=11 TYPE=A ATTR=TXT:Like
+WAIT SECONDS={{!var1}}
+'///////////////////facebook comment///////////////////'
+TAB T=1
+SET !VAR1 EVAL("var randomNumber=Math.floor(Math.random()*3 + 2); randomNumber;")
+SET !VAR3 "https://m.facebook.com"
+URL GOTO={{!var3}}
+WAIT SECONDS={{!var1}}
+'change 70 with the number of your comment'
+SET !DATASOURCE comment.csv
+SET !VAR4 EVAL("var randomNumber=Math.floor(Math.random()*70 + 1); randomNumber;")
+TAG POS=1 TYPE=A ATTR=TXT:*<SP>Comments
+WAIT SECONDS={{!var1}}
+EVENT TYPE=CLICK SELECTOR="#composerInput" BUTTON=0
+EVENTS TYPE=KEYPRESS SELECTOR="#composerInput" CHARS="{{!COL1}}"
+WAIT SECONDS={{!var1}}
+TAG POS=1 TYPE=BUTTON FORM=ID:* ATTR=NAME:submit
+WAIT SECONDS=10
+URL GOTO={{!var3}}
+WAIT SECONDS={{!var1}}
+TAG POS=1 TYPE=A ATTR=TXT:*<SP>Comments
+WAIT SECONDS={{!var1}}
+EVENT TYPE=CLICK SELECTOR="#composerInput" BUTTON=0
+EVENTS TYPE=KEYPRESS SELECTOR="#composerInput" CHARS="{{!COL2}}"
+WAIT SECONDS={{!var1}}
+TAG POS=1 TYPE=BUTTON FORM=ID:* ATTR=NAME:submit
+WAIT SECONDS=10
+URL GOTO={{!var3}}
+WAIT SECONDS={{!var1}}
+TAG POS=1 TYPE=A ATTR=TXT:*<SP>Comments
+WAIT SECONDS={{!var1}}
+EVENT TYPE=CLICK SELECTOR="#composerInput" BUTTON=0
+EVENTS TYPE=KEYPRESS SELECTOR="#composerInput" CHARS="{{!COL3}}"
+WAIT SECONDS={{!var1}}
+TAG POS=1 TYPE=BUTTON FORM=ID:* ATTR=NAME:submit
+WAIT SECONDS=10
+URL GOTO={{!var3}}
+WAIT SECONDS={{!var1}}
+TAG POS=1 TYPE=A ATTR=TXT:*<SP>Comments
+WAIT SECONDS={{!var1}}
+EVENT TYPE=CLICK SELECTOR="#composerInput" BUTTON=0
+EVENTS TYPE=KEYPRESS SELECTOR="#composerInput" CHARS="{{!COL4}}"
+WAIT SECONDS={{!var1}}
+TAG POS=1 TYPE=BUTTON FORM=ID:* ATTR=NAME:submit
+WAIT SECONDS=10
+URL GOTO={{!var3}}
+WAIT SECONDS={{!var1}}
+TAG POS=1 TYPE=A ATTR=TXT:*<SP>Comments
+WAIT SECONDS={{!var1}}
+EVENT TYPE=CLICK SELECTOR="#composerInput" BUTTON=0
+EVENTS TYPE=KEYPRESS SELECTOR="#composerInput" CHARS="{{!COL5}}"
+WAIT SECONDS={{!var1}}
+TAG POS=1 TYPE=BUTTON FORM=ID:* ATTR=NAME:submit
+WAIT SECONDS=10
+CLEAR
