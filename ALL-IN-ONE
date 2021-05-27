@@ -153,7 +153,7 @@ WAIT SECONDS={{!var1}}
 TAG POS=5 TYPE=BUTTON ATTR=TXT:Add<SP>Friend
 WAIT SECONDS={{!var1}}
 REFRESH
-'///////////////////Add Friend///////////////////'
+'///////////////////Confirm Friend///////////////////'
 TAB T=1
 URL GOTO=https://m.facebook.com/friends/center/requests/
 TAG POS=1 TYPE=BUTTON ATTR=TXT:Confirm
